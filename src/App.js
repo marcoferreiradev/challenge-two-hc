@@ -1,15 +1,12 @@
 import React from 'react';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import SignUp from './pages/Signup';
+import { AuthProvider } from "./providers/auth";
+import Routes from './router/AppRouter';
 
 function App() {
   return (
-    <>
-      <Home />
-      <Login />
-      <SignUp />
-    </>
+    <AuthProvider>
+      <Routes />
+    </AuthProvider>
   );
 }
 
