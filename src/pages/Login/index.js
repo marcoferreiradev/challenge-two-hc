@@ -4,7 +4,8 @@ import Lottie from 'react-lottie';
 import animationLogin from '../../resources/lotties/person-in-login.json';
 
 
-import  logo  from '../../assets/images/logo.svg';
+import  IconLogo  from '../../assets/images/logo.svg';
+import Logo from '../../components/Logo';
 import * as S from './styled';
 
 function Login() {
@@ -55,10 +56,10 @@ function Login() {
       <S.ContainerAside>
         <S.AsideWrapper>
           <S.LogoWrapper>
-            <S.Logo src={logo} alt="Logo"/>
+            <Logo />
           </S.LogoWrapper>
           <S.Title>
-            Seja bem vindo ao desafio #2
+          Make the world’s products accessible
           </S.Title>
           <S.AnimationWrapper>
             <Lottie

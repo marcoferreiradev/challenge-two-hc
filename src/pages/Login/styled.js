@@ -8,7 +8,7 @@ export const Container = styled.section`
 
 export const ContainerAside = styled.article`
   width: 50%;
-  padding: 1.5rem 0;
+  padding: 3.2rem 0;
   background: var(--color-base-bone);
   min-height: 100vh;
   border-right: 1px solid var(--color-base-gray-secondary);
@@ -24,10 +24,8 @@ export const AsideWrapper = styled.div`
   padding: 0 6.5rem;
 `;
 
-export const LogoWrapper = styled.div``;
-
-export const Logo = styled.img`
-
+export const LogoWrapper = styled.div`
+  margin-bottom: 4rem;
 `;
 
 export const Title = styled.h2`
@@ -36,6 +34,7 @@ export const Title = styled.h2`
   letter-spacing: -.01em;
   line-height: 53px;
   font-weight: 900;
+  margin-bottom: 0.2rem;
 `;
 
 export const AnimationWrapper = styled.div`
