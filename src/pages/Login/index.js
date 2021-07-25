@@ -69,7 +69,7 @@ function Login() {
             <Logo />
           </S.LogoWrapper>
           <S.Title>
-          Make the world’s products accessible
+            Som de alta <br/> qualidade diz tudo
           </S.Title>
           <S.AnimationWrapper>
             <Lottie
