@@ -1,7 +1,14 @@
 import React, { useState } from 'react'
 import { useAuth } from "../../providers/auth";
+import Lottie from 'react-lottie';
+import animationLogin from '../../resources/lotties/person-in-login.json';
+
+
+import  logo  from '../../assets/images/logo.svg';
+import * as S from './styled';
 
 function Login() {
+  document.title = "Login";
   const [input, setInput] = useState({
     name: '',
   });
@@ -21,19 +28,59 @@ function Login() {
     })
   }
 
-  return (
-    <div>
-      Login
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationLogin,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  }
 
-      {user.isAuthenticated ?
-        ( <p> Usuário está logado </p>)
-        : ( <p> Usuário não logado </p>)
-      }
-      <input type="text" onChange={(e) => setInput({name: e.target.value})} />
-      <button onClick={handleLogin}> Login </button>
-      <button onClick={handleLogout}> Logout </button>
-      <hr />
-    </div>
+
+  return (
+    // <div>
+    //   Login
+
+    //   {user.isAuthenticated ?
+    //     ( <p> Usuário está logado </p>)
+    //     : ( <p> Usuário não logado </p>)
+    //   }
+    //   <input type="text" onChange={(e) => setInput({name: e.target.value})} />
+    //   <button onClick={handleLogin}> Login </button>
+    //   <button onClick={handleLogout}> Logout </button>
+    //   <hr />
+    // </div>
+    <S.Container>
+      <S.ContainerAside>
+        <S.AsideWrapper>
+          <S.LogoWrapper>
+            <S.Logo src={logo} alt="Logo"/>
+          </S.LogoWrapper>
+          <S.Title>
+            Seja bem vindo ao desafio #2
+          </S.Title>
+          <S.AnimationWrapper>
+            <Lottie
+              options={defaultOptions}
+              height={500}
+              width={500}
+            />
+          </S.AnimationWrapper>
+          <S.FooterWrapper>
+            <S.FooterItem target="_blank" href="https://github.com/marcoferreiradev/" rel="noopener noreferrer">
+              Github
+            </S.FooterItem>
+            <S.FooterItem target="_blank" href="https://www.linkedin.com/in/marco-william-24a7b8162/" rel="noopener noreferrer">
+              Linkedin
+            </S.FooterItem>
+          </S.FooterWrapper>
+        </S.AsideWrapper>
+      </S.ContainerAside>
+      <S.ContainerMain>
+
+      </S.ContainerMain>
+    </S.Container>
   )
 }
 

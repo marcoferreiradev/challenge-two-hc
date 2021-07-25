@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+	font-family: 'ArminGrotesk';
+	src: url('./assets/fonts/ArminGroteskRegular.otf');
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'ArminGrotesk';
+	src: url('./assets/fonts/ArminGroteskSemiBold.otf');
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'ArminGrotesk';
+	src: url('./assets/fonts/ArminGroteskBlack.otf');
+	font-weight: 900;
+}
+@font-face {
+	font-family: 'RobotoMono';
+	src: url('./assets/fonts/RobotoMonoBold.ttf');
+	font-weight: 700;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/
   v2.0 | 20110126
   License: none (public domain)
@@ -51,4 +74,24 @@ table {
 
 * {
   box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'ArminGrotesk';
+}
+
+:root{
+	--color-base-bone: rgba(246, 246, 235, 1);
+	--color-base-gray: #4b4b4e;
+	--color-base-gray-secondary: rgba(203, 203, 205, 1);
+	--color-base-blue: rgba(16, 40, 75, 1);
+	--color-base-blue-secondary: rgba(56, 31, 209, 1);
+	--color-neutral-black: rgba(0, 0, 0, 1);
+	--color-neutral-white: rgba(255, 255, 255, 1);
+
+	--color-link-hover: rgba(126,109,233,1);
 }
