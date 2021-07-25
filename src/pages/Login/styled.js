@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
+  height: 100%;
   position: relative;
   display: flex;
 `;
@@ -16,6 +17,7 @@ export const ContainerAside = styled.article`
 
 export const ContainerMain = styled.article`
   width: 50%;
+  height: 100%;
   min-height: 100vh;
 `;
 
@@ -62,5 +64,60 @@ export const FooterItem = styled.a`
   }
 `;
 
-export const MainWrapper = styled.div``;
+export const MainWrapper = styled.div`
+  max-width: 40rem;
+  padding: 3.2rem 0;
+  margin: 0 12.8rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+`;
 
+
+export const FormWrapper = styled.form`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+`;
+
+export const FormTitle = styled.h2`
+  font-size: 3.2rem;
+  line-height: 35px;
+  font-weight: 900;
+  color: var(--color-base-blue);
+  margin-bottom: 2.4rem;
+`;
+
+
+export const FormButton = styled.div`
+  width: 100%;
+
+  svg {
+    width: 100%;
+    margin: 2.4rem 0 ;
+  }
+`;
+
+export const TextBottom = styled.div`
+  width: 100%;
+  text-align: center;
+  color: var(--color-base-gray);
+  font-size: 1.6rem;
+
+  a {
+    color: var(--color-link-static);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color .2s ease;
+
+    &:hover {
+      color: var(--color-link-hover);
+    }
+  }
+`;

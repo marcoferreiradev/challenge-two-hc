@@ -78,10 +78,12 @@ table {
 
 html {
 	font-size: 62.5%;
+	height: 100%;
 }
 
 body {
 	font-family: 'ArminGrotesk';
+	height: 100%;
 }
 
 :root{
@@ -93,5 +95,26 @@ body {
 	--color-neutral-black: rgba(0, 0, 0, 1);
 	--color-neutral-white: rgba(255, 255, 255, 1);
 
+	/* Link */
+	--color-link-static: rgba(56, 31, 209, 1);
 	--color-link-hover: rgba(126,109,233,1);
+
+	/* Errors */
+	--color-type-error: rgba(186, 28, 28, 1);
+
+	/* Input */
+	--color-form-input-active: rgba(44,25,164,1);
+	--color-form-input-border: rgba(172,172,175,1);
+
+	/* Button */
+	--color-button-primary: rgba(56, 31, 209, 1);
+	--color-button-primary-hover: rgba(87, 64, 226, 1);
+	--color-button-primary-active: rgba(44, 25, 164, 1);
+	--color-button-secondary: rgba(16, 40, 75, 1);
+	--color-button-secondary-hover: rgba(25, 63, 118, 1);
+	--color-button-secondary-active: rgba(16, 40, 75, 1);
+}
+
+#root {
+	height: 100%;
 }

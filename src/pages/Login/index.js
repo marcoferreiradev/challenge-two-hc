@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import { useAuth } from "../../providers/auth";
+import { useForm } from "react-hook-form";
 import Lottie from 'react-lottie';
+import { Link } from 'react-router-dom';
+
+import ButtonLink from '../../components/ButtonLink';
 import animationLogin from '../../resources/lotties/person-in-login.json';
-
-
-import  IconLogo  from '../../assets/images/logo.svg';
 import Logo from '../../components/Logo';
+import Line from '../../assets/images/line';
+import * as Form from '../../components/Form';
 import * as S from './styled';
+
 
 function Login() {
   document.title = "Login";
@@ -36,6 +40,12 @@ function Login() {
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice"
     }
+  }
+
+  const {register, handleSubmit, formState: { errors }} = useForm();
+
+  const onSubmit = (data) => {
+    console.log('Clicou no login');
   }
 
 
@@ -79,7 +89,65 @@ function Login() {
         </S.AsideWrapper>
       </S.ContainerAside>
       <S.ContainerMain>
-
+        <S.MainWrapper>
+          <S.FormWrapper onSubmit={handleSubmit(onSubmit)}>
+            <S.FormTitle>
+              Faça seu login
+            </S.FormTitle>
+            <Form.Group>
+              <Form.GroupText>
+                <Form.Label>
+                  Email:
+                </Form.Label>
+                <Form.Errors>
+                  {errors?.email?.type === "required" && <p> Obrigatório </p>}
+                  {errors?.email?.type === "pattern" && (
+                    <p> E-mail incorreto </p>
+                  )}
+                </Form.Errors>
+              </Form.GroupText>
+              <Form.InputWrapper>
+                <Form.Input
+                  {...register("email", {
+                    required: true,
+                    pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i
+                  })}
+                  placeholder="Ex: beatriz.lima@gmail.com"
+                  className={errors?.email && 'in--error'}
+                />
+              </Form.InputWrapper>
+            </Form.Group>
+            <Form.Group>
+            <Form.GroupText>
+                <Form.Label>
+                  Senha:
+                </Form.Label>
+                <Form.Errors>
+                  {errors?.password?.type === "required" && <p> Obrigatório </p>}
+                </Form.Errors>
+              </Form.GroupText>
+              <Form.InputWrapper>
+                <Form.Input
+                  {...register("password", {
+                    required: true,
+                  })}
+                  // placeholder="Ex: Sua senha"
+                  className={errors?.password && 'in--error'}
+                  type="password"
+                />
+              </Form.InputWrapper>
+            </Form.Group>
+            <S.FormButton>
+              <ButtonLink url="/" type="submit">
+                Entrar
+              </ButtonLink>
+              <Line />
+            </S.FormButton>
+            <S.TextBottom>
+              Não tem uma conta?  <Link to="/signup"> Cadastre-se </Link>
+            </S.TextBottom>
+          </S.FormWrapper>
+        </S.MainWrapper>
       </S.ContainerMain>
     </S.Container>
   )
