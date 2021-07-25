@@ -2,6 +2,7 @@ import React  from 'react'
 import { useAuth } from '../../providers/auth';
 
 function Home() {
+  document.title = 'Home';
 
   const { user } = useAuth();
   console.log(user) ;
