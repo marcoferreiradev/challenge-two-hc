@@ -17,10 +17,8 @@ export const AuthProvider = (props) => {
     }
   }, [])
 
-  const [userLogged, setUserLogged] = useState();
-
   return (
-    <AuthContext.Provider value={{user, setUser, userLogged, setUserLogged}}>
+    <AuthContext.Provider value={{user, setUser}}>
       {props.children}
     </AuthContext.Provider>
   )

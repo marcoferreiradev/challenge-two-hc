@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import Login from '../pages/Login';
 import SignUp from '../pages/Signup';
 import NotFound from '../pages/404';
+import RegisterProduct from '../pages/RegisterProduct';
 
 function Routes() {
   return (
@@ -12,6 +13,7 @@ function Routes() {
         <Route path="/" component={Home} exact />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={SignUp} />
+        <Route path="/register-product" component={RegisterProduct} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>

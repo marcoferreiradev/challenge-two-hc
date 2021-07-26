@@ -11,7 +11,7 @@ const Header = () => {
           <IconLogo />
         </S.LogoWrapper>
         <S.NavWrapper>
-          <S.NavLink to="/cadastro-produtos">
+          <S.NavLink to="/register-product">
             Cadastro de produtos
           </S.NavLink>
         </S.NavWrapper>
