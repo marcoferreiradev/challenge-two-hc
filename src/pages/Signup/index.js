@@ -73,7 +73,7 @@ function SignUp() {
               <Form.Input
                 {...register("telefone", {
                   required: true,
-                  pattern: /^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$/i
+                  // pattern: ^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$/i
                 })}
                 type="tel"
                 placeholder="Ex: (11) 99999-9999"
