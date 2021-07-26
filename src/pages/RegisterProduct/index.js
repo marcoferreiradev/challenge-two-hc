@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
-import { useAuth } from "../../providers/auth";
+import React from 'react'
 import { useForm } from "react-hook-form";
 import Lottie from 'react-lottie';
-import { Link } from 'react-router-dom';
 
 import Button from '../../components/Button';
 import animationProductHunt from '../../resources/lotties/product-hunt.json';

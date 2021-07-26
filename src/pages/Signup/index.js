@@ -13,7 +13,7 @@ import * as Form from '../../components/Form';
 
 function SignUp() {
   document.title = "Cadastre-se";
-  const { user, setUser } = useAuth();
+  const { setUser } = useAuth();
 
   const {register, handleSubmit, formState: { errors }} = useForm();
 

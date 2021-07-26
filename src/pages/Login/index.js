@@ -14,24 +14,24 @@ import * as S from './styled';
 
 function Login() {
   document.title = "Login";
-  const [input, setInput] = useState({
-    name: '',
-  });
-  const { user, setUser  } = useAuth();
+  // const [input, setInput] = useState({
+  //   name: '',
+  // });
+  // const { user, setUser  } = useAuth();
 
-  const handleLogin = () => {
-    const loginData = {...input, isAuthenticated: true};
-    localStorage.setItem('user', JSON.stringify(loginData));
-    setUser(loginData);
-  }
+  // const handleLogin = () => {
+  //   const loginData = {...input, isAuthenticated: true};
+  //   localStorage.setItem('user', JSON.stringify(loginData));
+  //   setUser(loginData);
+  // }
 
-  const handleLogout = () => {
-    localStorage.removeItem('user');
-    setUser({
-      name: "",
-      isAuthenticated: false
-    })
-  }
+  // const handleLogout = () => {
+  //   localStorage.removeItem('user');
+  //   setUser({
+  //     name: "",
+  //     isAuthenticated: false
+  //   })
+  // }
 
   const defaultOptions = {
     loop: true,
