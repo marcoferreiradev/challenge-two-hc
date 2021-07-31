@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   position: relative;
   display: flex;
 `;
@@ -17,7 +17,6 @@ export const ContainerAside = styled.article`
 
 export const ContainerMain = styled.article`
   width: 50%;
-  height: 100%;
   min-height: 100vh;
 `;
 
@@ -70,7 +69,7 @@ export const MainWrapper = styled.div`
   margin: 0 12.8rem;
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

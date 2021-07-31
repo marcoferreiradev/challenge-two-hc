@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   position: relative;
   display: flex;
 `;
@@ -13,11 +13,13 @@ export const ContainerAside = styled.article`
   background: var(--color-base-bone);
   min-height: 100vh;
   border-right: 1px solid var(--color-base-gray-secondary);
+  position: sticky;
+  top: 0;
+  height: 140vh;
 `;
 
 export const ContainerMain = styled.article`
   width: 50%;
-  height: 100%;
   min-height: 100vh;
 `;
 
