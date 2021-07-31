@@ -6,14 +6,16 @@ import SignUp from '../pages/Signup';
 import NotFound from '../pages/404';
 import RegisterProduct from '../pages/RegisterProduct';
 
+import PrivateRoute from './PrivateRoute.js';
+
 function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={Home} exact />
+        <PrivateRoute path="/" component={Home} exact />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={SignUp} />
-        <Route path="/register-product" component={RegisterProduct} />
+        <PrivateRoute path="/register-product" component={RegisterProduct} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
