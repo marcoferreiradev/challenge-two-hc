@@ -147,6 +147,9 @@ body {
 	--color-button-secondary: rgba(16, 40, 75, 1);
 	--color-button-secondary-hover: rgba(25, 63, 118, 1);
 	--color-button-secondary-active: rgba(16, 40, 75, 1);
+
+	/* Text */
+	--color-type-purple: #381fd1;
 }
 
 #root {

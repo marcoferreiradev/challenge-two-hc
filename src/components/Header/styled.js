@@ -41,6 +41,7 @@ export const NavButton = styled(ButtonLink)`
 export const NavWrapper = styled.div`
   display: flex;
   align-items: center;
+  padding: 0 20px;
 `;
 
 const styleButton = css`

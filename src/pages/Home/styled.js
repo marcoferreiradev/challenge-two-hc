@@ -22,10 +22,23 @@ export const AnimationWrapper = styled.div`
   align-items: center;
 `;
 
-export const BigTitle = styled.h1`
-  font-size: 8.6rem;
+export const Title = styled.h1`
+  font-size: 4.8rem;
   font-weight: 900;
-  line-height: 96px;
+  line-height: 53px;
   color: var(--color-base-blue);
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
+  text-align: center;
 `;
+
+export const  Description = styled.p`
+  font-size: 2rem;
+  color: var(--color-base-gray);
+  font-weight: 400;
+  letter-spacing: .01em;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 1.6rem;
+`;
+
+export const DividerWrapper = styled.div``;

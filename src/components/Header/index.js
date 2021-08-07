@@ -1,5 +1,5 @@
 import React from 'react'
-import IconLogo from '../../components/Logo';
+import IconLogo from '../../components/Logo/IndexV2';
 
 import * as S from './styled';
 
@@ -8,7 +8,7 @@ const Header = () => {
     <S.HeaderContainer>
       <S.Nav>
         <S.LogoWrapper>
-          <IconLogo />
+          <IconLogo/>
         </S.LogoWrapper>
         <S.NavWrapper>
           <S.NavLink to="/register-product">
